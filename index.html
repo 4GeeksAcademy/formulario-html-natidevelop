@@ -12,18 +12,18 @@
 
 <body>
   <div class="container mt-5">
-    <div class="card">
+    <div class="card my-3">
       <div class="card-header">
         <h1>Payment form example</h1>
       </div>
       <div class="card-body">
         <div class="alert alert-danger" role="alert">
-         <p class="text-danger-emphasis">Some fields are missing</p>
+         <p class="text-danger-emphasis mb-0">Some fields are missing</p>
         </div>
         <form class="row g-3 m-2">
           <div class="col-md-5">
             <label for="inputEmail4" class="form-label"><b>Card #</b></label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder=" xxxxxxxxxxxxxx">
+            <input type="email" class="form-control" id="inputEmail4" placeholder=" XXXXXXXXXXXXXXX">
           </div>
           <div class="col-md-3">
             <label for="inputPassword4" class="form-label"><b>CVC #</b></label>
@@ -32,7 +32,7 @@
           <div class="col-4">
             <label for="inputAddress" class="form-label"><b>Amount</b></label>
             <div class="d-flex">
-              <strong>$</strong>
+              <i class="fa-solid fa-dollar-sign mt-1"></i>
               <input type="text" class="form-control" id="inputAddress" placeholder="Amount">
             </div>
           </div>
@@ -52,10 +52,13 @@
           <div class="col-md-3">
             <label for="inputZip" class="form-label"><b>State</b></label>
             <select id="inputState" class="form-select">
-              <option selected>Pick a State</option>
+              <option selected disabled>Pick a State</option>
               <option>Montevideo</option>
               <option>Florida</option>
               <option>Buenos Aires</option>
+              <option>Popayán</option>
+              <option>Caracas</option>
+              <option>Colonia</option>
             </select>
           </div>
           <div class="col-md-3">
@@ -65,34 +68,36 @@
           <!-- hacerlo mas chico y darle tono mas oscuro -->
           <div class="col-md-6 ms-auto">
             <p><b>we accept:</b></p>
-            <div class="alert alert-dark" role="alert">
+            <div class="d-flex">
+            <div class="alert alert-dark bg-secondary" role="alert">
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                   value="option1">
-                <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard"></i></label>
+                <label class="form-check-label" for="inlineRadio1"><i class="fa-brands fa-cc-mastercard text-light"></i></label>
               </div>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                   value="option2">
-                <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i></label>
+                <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa text-light"></i></label>
               </div>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                   value="option2">
-                <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-diners-club"></i></label>
+                <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-diners-club text-light"></i></label>
               </div>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
                   value="option3">
-                <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-amex"></i></label>
+                <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-amex text-light"></i></label>
               </div>
+            </div>
             </div>
           </div>
           <div class="col-md-6 ms-auto">
             <label for="exampleFormControlTextarea1" class="form-label"><b>Message</b></label>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            <div class="row g-3 m-2">
-              <p>Add any notes here.</p>
+            <div class="row ">
+              <small>Add any notes here.</small>
               <!-- queda como muu lejos del recuadro de message-->
             </div>
           </div>
